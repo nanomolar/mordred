@@ -2,7 +2,7 @@
 
 set -e
 source ./scripts/add_path.sh
-python -m mordred
+python -c 'from rdkit import Chem; print(Chem.MolFromSmiles("c1ccccc1"))'
 
 if [[ -n "$COVERAGE" ]]; then
     python -m mordred.tests -v --with-coverage
