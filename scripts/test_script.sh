@@ -2,10 +2,10 @@
 
 set -e
 source ./scripts/add_path.sh
-which python
+python -m mordred
 
 if [[ -n "$COVERAGE" ]]; then
-    python -m mordred.tests -v
+    python -m mordred.tests -v --with-coverage
 else
     python -m mordred.tests -v
 fi
