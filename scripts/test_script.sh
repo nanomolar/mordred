@@ -4,9 +4,9 @@ set -e
 source ./scripts/add_path.sh
 
 if [[ -n "$COVERAGE" ]]; then
-    python -m mordred.tests -q --with-coverage
+    python -m mordred.tests -v --with-coverage
 else
-    python -m mordred.tests -q
+    python -m mordred.tests -v
 fi
 
 echo "test README.rst" >&2
